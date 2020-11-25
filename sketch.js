@@ -4,10 +4,11 @@ const Bodies = Matter.Bodies;
 
 var engine, world;
 var box1, pig1;
-var backgroundImg;
+var backgroundImg,platform;
 
 function preload() {
     backgroundImg = loadImage("sprites/bg.png");
+    platform = new Ground(150,305,300,170);
 }
 
 function setup(){
@@ -53,10 +54,12 @@ function draw(){
     box4.display();
     pig3.display();
     log3.display();
+   
 
     box5.display();
     log4.display();
     log5.display();
 
     bird.display();
+    platform.display();
 }
